@@ -14,7 +14,7 @@ const routes = require("./routes")
 // Enable cross-origin resource sharing for the frontend in developement
 if(process.env.NODE_ENV === "developement") {
   app.use(cors({
-    origin: 'http://127.0.0.1:8080',
+    origin: 'http://77.55.214.39:8080',
     credentials: true
   }))
 }
@@ -31,7 +31,7 @@ app.get('/*', (req, res) => {
 })
 
 const server = app.listen(config.port, () => {
-  console.log(`Server listening on http://127.0.0.1:${config.port}`)
+  console.log(`Server listening on http://77.55.214.39:${config.port}`)
 })
 
 socket.init(server)
